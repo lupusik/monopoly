@@ -2,5 +2,5 @@
 
 void Punishment::stayOn(Player& player)
 {
-    player.takeMoney(m_punishment);
+    player.spendMoney(m_punishment);
 }
