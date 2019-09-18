@@ -25,3 +25,7 @@ void Board::move(Player& player, unsigned int numOfSquare)
     currentSquare->stayOn(player);
 
 }
+
+void Board::create()
+{
+}

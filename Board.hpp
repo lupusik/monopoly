@@ -15,6 +15,7 @@ public:
     Board();
     Iterator getFirstSquare();
     void move(Player& player, unsigned int numOfSquare);
+    void create();
 
 private:
     ArrayOfSquares squares;
