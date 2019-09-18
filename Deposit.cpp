@@ -3,8 +3,7 @@
 
 void Deposit::goThrough(Player& player)
 {
-    player.spendMoney(amount);
-    deposit += amount;
+    deposit += player.spendMoney(amount);
 }
 
 void Deposit::stayOn(Player& player)

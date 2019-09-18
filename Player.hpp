@@ -10,7 +10,7 @@ public:
   {
   }
 
-  void spendMoney(unsigned int amount);
+  unsigned int spendMoney(unsigned int amount);
   void earnMoney(unsigned int amount);
   void move(unsigned int numOfSquares);
   bool noMoney() { return money <= 0; }
