@@ -14,12 +14,7 @@ void Player::earnMoney(unsigned int amount)
   money += amount;
 }
 
-Iterator& Player::getCurrentSquare()
+void Player::move(unsigned int numOfSquares)
 {
-    return currentSquare;
-}
 
-void Player::setCurrentSquare(Iterator& iterator)
-{
-    currentSquare = iterator;
 }

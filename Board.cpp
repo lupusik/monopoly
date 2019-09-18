@@ -1,30 +1,21 @@
 #include "Board.hpp"
 #include "Player.hpp"
+#include "SquareIterator.hpp"
 
 Board::Board()
 {
 }
 
-Iterator Board::getFirstSquare()
+Squares::iterator Board::getFirstSquare()
 {
     return squares.begin();
 }
 
-void Board::move(Player& player, unsigned int numOfSquare)
+Squares::iterator Board::getLastSquare()
 {
-    auto& currentSquare = player.getCurrentSquare();
-
-    while(numOfSquare -1 == 0)
-    {
-
-        currentSquare++;
-        currentSquare->goThrough(player);
-        numOfSquare--;
-    }
-    currentSquare++;
-    currentSquare->stayOn(player);
-
+    return squares.end();
 }
+
 
 void Board::create()
 {
