@@ -17,12 +17,14 @@ public:
       }
     }
 
-    void createBoard();
-    void addPlayer(std::string name);
+    void run(unsigned int rounds);
 
 private:
+    void createBoard();
+    void addPlayer(std::string name);
+    bool isEndOfGame();
+
     Board board;
     std::vector<Player> players;
     Dice dices[2];
-    unsigned int round;
 };
