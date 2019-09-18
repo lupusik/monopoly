@@ -4,11 +4,13 @@
 class Player
 {
 public:
-  Player() : piece(*this)
+  Player(std::string aName, int amountOfMoney) : name(aName), money(amountOfMoney), piece(*this)
   {
   }
 
   void move(unsigned int numOfSquares);
+  void spendMoney(unsigned int amount);
+  void earnMoney(unsigned int amount);
 
 private:
   std::string name;

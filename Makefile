@@ -1,2 +1,2 @@
 all: *.cpp
-	gcc -o monopoly *.cpp 
+	gcc -std=c++11 -o monopoly *.cpp 
