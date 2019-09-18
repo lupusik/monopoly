@@ -16,5 +16,11 @@ void Player::earnMoney(unsigned int amount)
 
 void Player::move(unsigned int numOfSquares)
 {
-
+    while(numOfSquares)
+    {
+        currentSquare.next();
+        currentSquare->goThrough(*this);
+        numOfSquares--;
+    }
+    currentSquare->stayOn(*this);
 }

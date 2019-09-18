@@ -17,7 +17,7 @@ public:
 
     void next();
 
-    Square& operator*();
+    Square* operator->();
 
 
 private:

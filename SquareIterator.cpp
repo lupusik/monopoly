@@ -13,7 +13,7 @@ void SquareIterator::next()
     }
 }
 
-Square& SquareIterator::operator*()
+Square* SquareIterator::operator->()
 {
-    return *square;
+    return square;
 }
