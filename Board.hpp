@@ -13,7 +13,7 @@ class Board
 {
 public:
     Board();
-    Iterator getFirstSquare() {};
+    Iterator getFirstSquare();
     void move(Player& player, unsigned int numOfSquare);
 
 private:

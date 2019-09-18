@@ -7,6 +7,7 @@ class Start : public Square
 public:
     Start(int reward) : m_reward(reward) {}
     void goThrough(Player& player) override;
+    void stayOn(Player& player) override;
 
 private:
     int m_reward;

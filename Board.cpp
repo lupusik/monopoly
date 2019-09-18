@@ -12,15 +12,16 @@ Iterator Board::getFirstSquare()
 
 void Board::move(Player& player, unsigned int numOfSquare)
 {
-    auto currentSquare = player.getCurrentSquare();
+    auto& currentSquare = player.getCurrentSquare();
 
     while(numOfSquare -1 == 0)
     {
+
         currentSquare++;
-        currentSquare.goThrough(player);
+        currentSquare->goThrough(player);
         numOfSquare--;
     }
     currentSquare++;
-    currentSquare.stayOn(player);
+    currentSquare->stayOn(player);
 
 }
