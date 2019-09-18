@@ -1,7 +1,7 @@
 #ifndef SQUARE_HPP
 #define SQUARE_HPP
-#include "Player.hpp"
 
+class Player;
 class Square
 {
 public:

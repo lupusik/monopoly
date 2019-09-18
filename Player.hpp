@@ -1,19 +1,21 @@
 #include <string>
-#include "Piece.hpp"
+#include "Board.hpp"
+
 
 class Player
 {
 public:
-  Player(std::string aName, int amountOfMoney) : name(aName), money(amountOfMoney), piece(*this)
+  Player(std::string aName, int amountOfMoney, Iterator square) : name(aName), money(amountOfMoney), currentSquare(square)
   {
   }
 
-  void move(unsigned int numOfSquares);
+  Iterator& getCurrentSquare();
+  void setCurrentSquare(Iterator& iterator);
   void spendMoney(unsigned int amount);
   void earnMoney(unsigned int amount);
 
 private:
   std::string name;
   int money;
-  Piece piece;
+  Iterator currentSquare;
 };

@@ -1,10 +1,5 @@
 #include "Player.hpp"
 
-void Player::move(unsigned int numOfSquares)
-{
-  piece.move(numOfSquares);
-}
-
 void Player::spendMoney(unsigned int amount)
 {
   money -= amount;
@@ -17,4 +12,14 @@ void Player::spendMoney(unsigned int amount)
 void Player::earnMoney(unsigned int amount)
 {
   money += amount;
+}
+
+Iterator& Player::getCurrentSquare()
+{
+    return currentSquare;
+}
+
+void Player::setCurrentSquare(Iterator& iterator)
+{
+    currentSquare = iterator;
 }
