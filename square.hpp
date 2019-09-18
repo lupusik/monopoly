@@ -6,8 +6,8 @@ class Square
 {
 public:
     Square();
-    void goThrough(Player& player);
-    void stayOn(Player& player);
+    virtual void goThrough(Player& player);
+    virtual void stayOn(Player& player);
 };
 
 #endif // SQUARE_HPP
