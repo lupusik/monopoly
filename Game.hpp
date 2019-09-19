@@ -11,17 +11,13 @@ public:
     Game(unsigned int numOfPlayers)
     {
       createBoard();
-      for (unsigned int ii = 0; ii < numOfPlayers; ii++)
-      {
-        addPlayer("Player");
-      }
     }
 
+    void addPlayer(std::string name);
     void run(unsigned int rounds);
 
 private:
     void createBoard();
-    void addPlayer(std::string name);
     bool isEndOfGame();
 
     Board board;

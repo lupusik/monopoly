@@ -21,7 +21,7 @@ void Game::run(unsigned int rounds)
     }
     for (std::vector<Player>::iterator itPlayer = players.begin(); itPlayer != players.end(); itPlayer++)
     {
-      //itPlayer->move(dices[0].throwDice() + dices[1].throwDice());
+      itPlayer->move(dices[0].throwDice() + dices[1].throwDice());
     }
   }
 }
@@ -31,7 +31,7 @@ bool Game::isEndOfGame()
   unsigned int numOfLoosers = 0;
   for (std::vector<Player>::iterator itPlayer = players.begin(); itPlayer != players.end(); itPlayer++)
   {
-    if (itPlayer->noMoney())
+    if (itPlayer->isLooser())
     {
       numOfLoosers++;
     }
