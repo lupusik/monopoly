@@ -1,12 +1,15 @@
 #include "Player.hpp"
 
-void Player::spendMoney(unsigned int amount)
+unsigned int Player::spendMoney(unsigned int amount)
 {
-  money -= amount;
-  if (money < 0)
+  int difference = money - amount;
+  if (difference < 0)
   {
-    money = 0;
+      money = 0;
+      return difference;
   }
+  money -= amount;
+  return amount;
 }
 
 void Player::earnMoney(unsigned int amount)
