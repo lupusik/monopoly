@@ -8,9 +8,8 @@
 class Game
 {
 public:
-    Game(unsigned int numOfPlayers)
+    Game(Board aBoard, std::vector<Dice> aDices) : board(aBoard), dices(aDices)
     {
-      createBoard();
     }
 
     void addHumanPlayer(std::string name);
@@ -19,10 +18,9 @@ public:
     void run(unsigned int rounds);
 
 private:
-    void createBoard();
     bool isEndOfGame();
 
-    Board board;
+    Board &board;
     std::vector<GamePlayer> players;
-    Dice dices[2];
+    std::vector<Dice> &dices;
 };

@@ -6,6 +6,7 @@ class Square
 {
 public:
     Square();
+    virtual ~Square() {};
     virtual void goThrough(SquareGuest& player);
     virtual void stayOn(SquareGuest& player);
 };

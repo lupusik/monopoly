@@ -1,8 +1,11 @@
 #include "Game.hpp"
+#include "GameFactory.hpp"
+#include "CosmicGameFactory.hpp"
 
 int main(int argc, char *argv[])
 {
-  Game game(4);
+  CosmicGameFactory gameFactory;
+  Game game = gameFactory.create();
   game.addRandomPlayer("Player 1");
   game.addGreedyPlayer("Player 2");
   game.addRandomPlayer("Player 3");

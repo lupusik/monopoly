@@ -4,11 +4,6 @@
 #include "GreedyPlayer.hpp"
 #include "RandomPlayer.hpp"
 
-void Game::createBoard()
-{
-  board.create();
-}
-
 void Game::addHumanPlayer(std::string name)
 {
   players.push_back(HumanPlayer(name, 20000, board.begin()));

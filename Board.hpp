@@ -12,9 +12,9 @@ class Board
 public:
     Board();
     SquareIterator begin();
-    void create();
+    virtual void create();
 
-private:
+protected:
     Squares squares;
 };
 
