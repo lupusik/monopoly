@@ -2,25 +2,25 @@
 #include "RealEstate.hpp"
 
 
-void RealEstateSquare::stayOn(Player& player)
+void RealEstateSquare::stayOn(SquareGuest& player)
 {
   if (owner)
   {
     unsigned int money = player.spendMoney(price);
     owner->earnMoney(money);
   }
+  else if (player.wantToBuy())
+  {
+      buy(player);
+  }
 }
 
-void RealEstateSquare::buy(Player& player)
+void RealEstateSquare::buy(SquareGuest& player)
 {
-  if (owner || not player.wantToBuy())
-  {
-    return;
-  }
   if (player.hasEnoughMoney(price))
   {
     player.spendMoney(price);
     player.addRealEstate(RealEstate(price));
-    owner = std::make_shared<Player>(player);
+    owner = std::make_shared<SquareGuest>(player);
   }
 }

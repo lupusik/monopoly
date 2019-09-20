@@ -11,16 +11,10 @@ Board::Board()
 {
 }
 
-Squares::iterator Board::getFirstSquare()
+SquareIterator Board::begin()
 {
-    return squares.begin();
+    return SquareIterator(squares.begin(), squares.end());
 }
-
-Squares::iterator Board::getLastSquare()
-{
-    return squares.end();
-}
-
 
 void Board::create()
 {

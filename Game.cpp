@@ -1,14 +1,27 @@
 #include "Game.hpp"
 #include "SquareIterator.hpp"
+#include "HumanPlayer.hpp"
+#include "GreedyPlayer.hpp"
+#include "RandomPlayer.hpp"
 
 void Game::createBoard()
 {
   board.create();
 }
 
-void Game::addPlayer(std::string name)
+void Game::addHumanPlayer(std::string name)
 {
-  players.push_back(Player(name, 20000, SquareIterator(board.getFirstSquare(), board.getLastSquare())));
+  players.push_back(HumanPlayer(name, 20000, board.begin()));
+}
+
+void Game::addGreedyPlayer(std::string name)
+{
+  players.push_back(GreedyPlayer(name, 20000, board.begin()));
+}
+
+void Game::addRandomPlayer(std::string name)
+{
+  players.push_back(RandomPlayer(name, 20000, board.begin()));
 }
 
 void Game::run(unsigned int rounds)
@@ -19,9 +32,9 @@ void Game::run(unsigned int rounds)
     {
       break;
     }
-    for (std::vector<Player>::iterator itPlayer = players.begin(); itPlayer != players.end(); itPlayer++)
+    for (auto& player : players)
     {
-      itPlayer->move(dices[0].throwDice() + dices[1].throwDice());
+      player.move(dices[0].throwDice() + dices[1].throwDice());
     }
   }
 }
@@ -29,9 +42,9 @@ void Game::run(unsigned int rounds)
 bool Game::isEndOfGame()
 {
   unsigned int numOfLoosers = 0;
-  for (std::vector<Player>::iterator itPlayer = players.begin(); itPlayer != players.end(); itPlayer++)
+  for (auto& player : players)
   {
-    if (itPlayer->isLooser())
+    if (player.isLooser())
     {
       numOfLoosers++;
     }

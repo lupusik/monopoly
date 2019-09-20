@@ -11,8 +11,7 @@ class Board
 {
 public:
     Board();
-    Squares::iterator getFirstSquare();
-    Squares::iterator getLastSquare();
+    SquareIterator begin();
     void create();
 
 private:

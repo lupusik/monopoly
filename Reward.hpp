@@ -6,7 +6,7 @@ class Reward : public Square
 {
 public:
     Reward(int reward) : m_reward(reward) {}
-    void stayOn(Player& player) override;
+    void stayOn(SquareGuest& player) override;
 
 private:
     int m_reward;

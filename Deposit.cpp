@@ -1,12 +1,11 @@
 #include "Deposit.hpp"
-#include "Player.hpp"
 
-void Deposit::goThrough(Player& player)
+void Deposit::goThrough(SquareGuest& player)
 {
     deposit += player.spendMoney(amount);
 }
 
-void Deposit::stayOn(Player& player)
+void Deposit::stayOn(SquareGuest& player)
 {
     player.earnMoney(deposit);
     deposit = 0;

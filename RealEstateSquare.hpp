@@ -7,11 +7,11 @@ class RealEstateSquare : public Square
 {
 public:
     RealEstateSquare(unsigned int aPrice, unsigned int aFee) : price(aPrice), fee(aFee) {}
-    virtual void stayOn(Player& player) override;
-    virtual void buy(Player& player);
+    virtual void stayOn(SquareGuest& player) override;
+    virtual void buy(SquareGuest& player);
 
 private:
-    std::shared_ptr<Player> owner;
+    std::shared_ptr<SquareGuest> owner;
     unsigned int price, fee;
 };
 

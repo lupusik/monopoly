@@ -8,8 +8,8 @@ class Deposit : public Square
 public:
     Deposit(unsigned int p_amount) : amount(p_amount), deposit(0){}
 
-    void goThrough(Player& player) override;
-    void stayOn(Player& player) override;
+    void goThrough(SquareGuest& player) override;
+    void stayOn(SquareGuest& player) override;
 
 private:
     unsigned int deposit;

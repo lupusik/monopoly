@@ -1,13 +1,12 @@
 #include "Start.hpp"
-#include "Player.hpp"
 
 
-void Start::goThrough(Player& player)
+void Start::goThrough(SquareGuest& player)
 {
     player.earnMoney(m_reward);
 }
 
-void Start::stayOn(Player& player)
+void Start::stayOn(SquareGuest& player)
 {
     player.earnMoney(m_reward);
 }

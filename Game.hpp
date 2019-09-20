@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 #include "Board.hpp"
-#include "Player.hpp"
+#include "GamePlayer.hpp"
 #include "Dice.hpp"
 
 class Game
@@ -13,7 +13,9 @@ public:
       createBoard();
     }
 
-    void addPlayer(std::string name);
+    void addHumanPlayer(std::string name);
+    void addGreedyPlayer(std::string name);
+    void addRandomPlayer(std::string name);
     void run(unsigned int rounds);
 
 private:
@@ -21,6 +23,6 @@ private:
     bool isEndOfGame();
 
     Board board;
-    std::vector<Player> players;
+    std::vector<GamePlayer> players;
     Dice dices[2];
 };

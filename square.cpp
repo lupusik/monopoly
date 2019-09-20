@@ -4,10 +4,10 @@ Square::Square()
 {
 }
 
-void Square::goThrough(Player& player)
+void Square::goThrough(SquareGuest& player)
 {
 }
 
-void Square::stayOn(Player& player)
+void Square::stayOn(SquareGuest& player)
 {
 }

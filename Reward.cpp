@@ -1,7 +1,6 @@
 #include "Reward.hpp"
-#include "Player.hpp"
 
-void Reward::stayOn(Player& player)
+void Reward::stayOn(SquareGuest& player)
 {
     player.earnMoney(m_reward);
 }

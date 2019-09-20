@@ -27,3 +27,4 @@ void Player::move(unsigned int numOfSquares)
     }
     currentSquare->stayOn(*this);
 }
+

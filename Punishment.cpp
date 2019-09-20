@@ -1,7 +1,6 @@
 #include "Punishment.hpp"
-#include "Player.hpp"
 
-void Punishment::stayOn(Player& player)
+void Punishment::stayOn(SquareGuest& player)
 {
     player.spendMoney(m_punishment);
 }

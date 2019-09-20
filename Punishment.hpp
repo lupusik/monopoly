@@ -7,7 +7,7 @@ class Punishment : public Square
 {
 public:
     Punishment(int punishment) : m_punishment(punishment) {}
-    void stayOn(Player& player) override;
+    void stayOn(SquareGuest& player) override;
 
 private:
     int m_punishment;
